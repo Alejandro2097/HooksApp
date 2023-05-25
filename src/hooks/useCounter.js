@@ -8,11 +8,11 @@ export const useCounter = (initialValue = 10) => {
     }
 
     const decrement = () => {
-        setCounter(initialValue);
+        setCounter( counter - 1);
     }
 
     const reset = () => {
-        setCounter( counter - 1);
+        setCounter(initialValue);
     }
 
     return {
