@@ -1,21 +1,14 @@
 import { useEffect, useState } from "react"
-import { Message } from "./Message";
+import { useForm } from "../hooks/useForm";
 
-export const SimpleForm = () => {
+export const FormWithCustomHook = () => {
 
-    const [formState, setFormState] = useState({
-        username: 'Krauser',
-        email: 'alejo@google.com'
+    const { formState, onInputChange} = useForm({
+        username: '',
+        email: '',
+        password: ''
     });
-    const {username, email} = formState;
-
-    const onInputChange = ({target}) => {
-        const {name, value} = target;
-        setFormState({
-            ...formState,
-            [name]: value
-        })
-    }
+    const {} = formState;
     useEffect(() => {
         console.log('useEffect called!');
     }, []);
@@ -45,9 +38,14 @@ export const SimpleForm = () => {
             value={email}
             onChange={onInputChange}
         />
-        { 
-            (username === 'Krauser') && <Message/>
-        }
+        <input
+            type="password"
+            className="form-control mt-2"
+            placeholder="Password"
+            name="password"
+            value={password}
+            onChange={onInputChange}
+        />
     </>
   )
 }
