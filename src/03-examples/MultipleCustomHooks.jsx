@@ -23,7 +23,11 @@ export const MultipleCustomHooks = () => {
               </blockquote>
             )
          }
-         <button className="btn btn-primary" onClick={() => increment()}>
+         <button 
+                className="btn btn-primary" 
+                disabled={isLoading}
+                onClick={() => increment()}
+                >
           Next quote
          </button>
     </>
