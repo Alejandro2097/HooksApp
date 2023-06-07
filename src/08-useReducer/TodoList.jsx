@@ -8,7 +8,7 @@ export const TodoList = ({todos = []}) => {
                 // Todo item
                 // eslint-disable-next-line react/prop-types
                 todos.map(todo => (
-                    <TodoItem key={todo.id } todos={todo}/>
+                    <TodoItem key={todo.id } todo={todo}/>
                 ))
             }
         </ul>
