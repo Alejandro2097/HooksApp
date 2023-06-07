@@ -1,6 +1,5 @@
 
 export const TodoItem = ({todos}) => {
-    console.log(todos, 'hijoooo')
   return (
     <>
         <li key={todos.id} className="list-group-item d-flex justify-content-between">
