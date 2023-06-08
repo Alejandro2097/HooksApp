@@ -1,6 +1,6 @@
 import { TodoItem } from "./TodoItem";
 
-export const TodoList = ({todos = [], onDeleteTodo}) => {
+export const TodoList = ({todos = [], onDeleteTodo, onToggleTodo}) => {
   return (
     <>
         <ul className="list-group">
@@ -8,7 +8,12 @@ export const TodoList = ({todos = [], onDeleteTodo}) => {
                 // Todo item
                 // eslint-disable-next-line react/prop-types
                 todos.map(todo => (
-                    <TodoItem key={todo.id } todo={todo} onDeleteTodo={id => onDeleteTodo(id)}/>
+                    <TodoItem 
+                      key={todo.id }
+                      todo={todo}
+                      onDeleteTodo={onDeleteTodo}
+                      onToggleTodo={onToggleTodo}
+                    />
                 ))
             }
         </ul>
