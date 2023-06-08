@@ -42,11 +42,10 @@ export const TodoApp = () => {
         })
     }
     const handleToggleTodo = (id) => {
-        console.log({id})
-        // dispatch({
-        //     type: '[TODO] Remove Todo',
-        //     payload: id
-        // })
+        dispatch({
+            type: '[TODO] Toggle Todo',
+            payload: id
+        })
     }
   return (
     <>
