@@ -44,9 +44,14 @@ export const useTodo = () => {
             payload: id
         })
     }
+    const todoCount = todos.length;
 
+    const pendingTodosCount = todos.filter(todo => !todo.done).length;
+    
   return {
     todos,
+    todoCount,
+    pendingTodosCount,
     handleNewTodo,
     handleDeleteTodo,
     handleToggleTodo
