@@ -18,10 +18,11 @@ import ReactDOM from 'react-dom/client'
 // import { Layout } from './05-useLayoutEffect/Layout'
 
 import './index.css'
-import { TodoApp } from './08-useReducer/TodoApp';
+import { MainApp } from './09-useContext/MainApp'
+// import { TodoApp } from './08-useReducer/TodoApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-    <TodoApp />
+    <MainApp />
   // </React.StrictMode>,
 )
