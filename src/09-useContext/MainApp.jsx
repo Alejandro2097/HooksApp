@@ -3,14 +3,13 @@ import { Navigate, Route, Routes } from "react-router-dom"
 import { AboutPage } from './AboutPage'
 import { HomePage } from './HomePage';
 import { LoginPage } from './LoginPage'
+import { NavBar } from "./NavBar";
 
 export const MainApp = () => {
   return (
     <>
         <h1>MainApp</h1>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/login">Login</a>
+        <NavBar/>
         <hr/>
         
         <Routes>
