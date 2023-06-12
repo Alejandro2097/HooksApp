@@ -25,4 +25,13 @@ describe('Pruebas con el useContext', () => {
         });
         expect(result.current.counter).toBe(103);
     });
+    test('debe de incrementar el contador', () => {
+        const { result } = renderHook(() => useCounter(100));
+        const { decrement } = result.current;
+        act(() => {
+            decrement();
+            decrement(2);
+        });
+        expect(result.current.counter).toBe(97);
+    });
 });
