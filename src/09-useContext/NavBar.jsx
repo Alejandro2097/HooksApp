@@ -8,7 +8,7 @@ export const NavBar = () => {
 
             <Link className="navbar-brand" to="/">useContext</Link>
 
-            <div className="collapse navbar-collapse" id="navbarNav">
+            <div className="navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     
                     <NavLink 
