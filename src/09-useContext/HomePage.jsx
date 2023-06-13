@@ -7,12 +7,9 @@ export const HomePage = () => {
     <>
         <h1>HomePage <small>{user?.name}</small></h1>
         <hr/>
-        <pre>
+        <pre aria-label="pre">
           {JSON.stringify(user, null, 3)}
         </pre>
-        <button className="btn btn-primary">
-          Estableser usuario
-        </button>
     </>
   )
 }
